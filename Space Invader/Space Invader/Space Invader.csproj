@@ -81,6 +81,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\sadFace.png" />
   </ItemGroup>
   <ItemGroup>

@@ -27,20 +27,115 @@ namespace Space_Invader
         public Form1()
         {
             InitializeComponent();
+            gameSetup();
         }
 
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
 
+            txtScore.Text = "Score: " + score;
+
+            if (goLeft)
+            {
+                player.Left -= playerSpeed;
+            }
+
+            if (goRight)
+            {
+                player.Left += playerSpeed;
+            }
+
+            enemyBulletTimer -= 10;
+
+            if (enemyBulletTimer < 1)
+            {
+                enemyBulletTimer = 300;
+                makeBullet("sadBullet");
+            }
+
+            foreach (Control x in this.Controls)
+            {
+
+                if (x is PictureBox && (string)x.Tag == "sadInvaders")
+                {
+                    x.Left += enemySpeed;
+
+                    if (x.Left > 730)
+                    {
+                        x.Top += 65;
+                        x.Left = -80;
+                    }
+
+
+                    if (x.Bounds.IntersectsWith(player.Bounds))
+                    {
+                        gameOver("Vous avez été envahie par les alien");
+                    }
+
+                    foreach (Control y in this.Controls)
+                    {
+                        if (y is PictureBox && (string)y.Tag == "bullet")
+                        {
+                            if (y.Bounds.IntersectsWith(x.Bounds))
+                            {
+                                this.Controls.Remove(x);
+                                this.Controls.Remove(y);
+                                score += 1;
+                                shooting = false;
+                            }
+                        }
+                    }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "bullet")
+                {
+                    x.Top -= 20;
+
+                    if (x.Top < 15)
+                    {
+                        this.Controls.Remove(x);
+                        shooting = false;
+                    }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "sadBullet")
+                {
+
+                    x.Top += 20;
+
+                    if (x.Top > 620)
+                    {
+                        this.Controls.Remove(x);
+                    }
+
+                    if (x.Bounds.IntersectsWith(player.Bounds))
+                    {
+                        this.Controls.Remove(x);
+                        gameOver("Vous avez été tué par les alien, RIP");
+                    }
+
+                }
+            }
+
+            if (score > 8)
+            {
+                enemySpeed = 12;
+            }
+
+            if (score == sadInvadersArray.Length)
+            {
+                gameOver("Bravo chacal, ta dead ca");
+            }
+
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
             }
-            if(e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
             }

@@ -1,0 +1,10 @@
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\bin\Debug\Space Invader.exe.config
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\bin\Debug\Space Invader.exe
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\bin\Debug\Space Invader.pdb
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space Invader.csproj.AssemblyReference.cache
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space_Invader.Form1.resources
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space_Invader.Properties.Resources.resources
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space Invader.csproj.GenerateResource.cache
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space Invader.csproj.CoreCompileInputs.cache
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space Invader.exe
+C:\Users\tomli\OneDrive - Ynov\Documents\B2\Liere_Tom_WFA\Space Invader\Space Invader\obj\Debug\Space Invader.pdb
